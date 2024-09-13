@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { MaterialModule } from '../app/material/material.module'
+import { CustomSidenavComponent } from "./components/custom-sidenav/custom-sidenav.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MaterialModule],
+  imports: [RouterOutlet, MaterialModule, CustomSidenavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
