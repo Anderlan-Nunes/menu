@@ -4,3 +4,11 @@
         <h2>nome do usuarío</h2>
     </div>
 </div>
+<mat-nav-list>
+    @for (item of menuItems(); track item) {
+    <a mat-list-item class="menu-item">
+        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+        <span matListItemTitle>{{ item.label }}</span>
+    </a>
+    }
+</mat-nav-list>
