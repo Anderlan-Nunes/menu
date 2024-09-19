@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { MaterialModule } from '../app/material/material.module'
@@ -14,4 +14,6 @@ import { CustomSidenavComponent } from "./components/custom-sidenav/custom-siden
 })
 export class AppComponent {
   title = 'menu-hamb';
+  collapsed= signal(false)
+  sidenavWidth= computed(() => this.collapsed() ? '60px' : '250px')
 }
