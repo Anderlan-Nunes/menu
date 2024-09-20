@@ -1,11 +1,11 @@
 <mat-toolbar class="mat-elevation-z3">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)=" collapsed.set(!collapsed())">
     <mat-icon>menu</mat-icon>
   </button>
 </mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav opened mode="side" [style.width]="'250px'" [style.background]="'red'" [style.borderRadius]="'0'">
-    <app-custom-sidenav/>
+  <mat-sidenav opened mode="side" [style.width]="sidenavWidth()" [style.background]="'red'" [style.borderRadius]="'0'">
+    <app-custom-sidenav [collapsed]="collapsed()"/>
   </mat-sidenav>
   <mat-sidenav-content class="content">
     <!-- <router-outlet></router-outlet> -->
