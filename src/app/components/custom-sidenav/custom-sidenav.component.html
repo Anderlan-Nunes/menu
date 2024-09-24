@@ -2,7 +2,7 @@
     <img [width]="profilePicSize()" 
         [height]="profilePicSize()"
         src="https://avatars.githubusercontent.com/u/88124870?v=4&size=64"/>
-    <div class="header-text">
+    <div class="header-text" [class.hide-header-text]="sideNavCollapsed()">
         <h2>nome do usuarío</h2>
     </div>
 </div>
@@ -10,7 +10,9 @@
     @for (item of menuItems(); track item) {
     <a mat-list-item class="menu-item">
         <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
-        <span matListItemTitle>{{ item.label }}</span>
+        @if (!sideNavCollapsed()) {
+            <span matListItemTitle >{{ item.label }}</span>
+        }
     </a>
     }
 </mat-nav-list>

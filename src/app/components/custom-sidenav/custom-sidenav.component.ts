@@ -29,6 +29,11 @@ export class CustomSidenavComponent {
       label: "Content",
       route: "content",
     },
+    {
+      icon: "analytics",
+      label: "Analytics",
+      route: "analytics",
+    },
   ]);
 
  profilePicSize = computed(() => this.sideNavCollapsed() ? '32' : '100')
