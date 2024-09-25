@@ -1,5 +1,5 @@
 import { Component, computed, Input, signal } from '@angular/core';
-
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import {MaterialModule} from '../../material/material.module'
 
 import {MenuItem} from '../../menu-item'
@@ -7,7 +7,7 @@ import {MenuItem} from '../../menu-item'
 @Component({
   selector: 'app-custom-sidenav',
   standalone: true,
-  imports: [MaterialModule], 
+  imports: [MaterialModule, RouterOutlet, RouterLink, RouterLinkActive], 
   templateUrl: './custom-sidenav.component.html',
   styleUrl: './custom-sidenav.component.scss'
 })
