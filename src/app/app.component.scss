@@ -12,3 +12,8 @@ mat-sidenav-container {
   padding: 24px;
 
 }
+
+mat-sidenav,
+mat-sidenav-content {
+  transition: all 500ms ease-in-out;
+}

@@ -1,4 +1,6 @@
-
+:host * {
+    transition: all 500ms ease-in-out;
+}
 .sidenav-header {
     padding-top: 24px;
     text-align: center;
@@ -19,6 +21,18 @@
     }
     .hide-header-text {
         opacity: 0;
-        height: 0px;
+        height: 0px !important; // vou fazer isso importante para que ele sobrescreva a altura do cabeçalho não precisa, mas caso precise eh pra forçar a fica com 0 qndo esta fechado
     }
+
+
+}
+
+.menu-item{
+    border-left: 5px solid ;
+    border-left-color: rgba(0, 0, 0, 0);
+}
+
+.selected-menu-item {
+    border-left-color: blue ;
+    // background-color: rgb(0, 0, 0 , 0.5) !important;
 }

@@ -11,11 +11,11 @@
     <a 
         mat-list-item class="menu-item" 
         [routerLink]="item.route" 
-        routerLinkActive 
+        routerLinkActive="selected-menu-item"
         #rla="routerLinkActive"
         [activated]="rla.isActive"
     >
-        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+        <mat-icon [fontSet]="rla.isActive ? 'material-icons' : 'material-icons-outlined'">{{ item.icon }}</mat-icon>
         @if (!sideNavCollapsed()) {
             <span matListItemTitle >{{ item.label }}</span>
         }
